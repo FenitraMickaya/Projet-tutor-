@@ -1,21 +1,13 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
 
-# Run and deploy your AI Studio app
+Prérequis :
+Android Studio (à installer si ce n'est pas déjà fait)
+Instructions
+Ouvrez Android Studio.
+Sélectionnez Open (Ouvrir) et choisissez le dossier contenant ce projet.
+Laissez Android Studio corriger automatiquement les éventuelles incompatibilités lors de l'importation du projet.
+Créez un fichier nommé .env à la racine du projet et ajoutez-y la variable GEMINI_API_KEY avec votre clé API Gemini (consultez le fichier .env.example pour voir un exemple).
 
-This contains everything you need to run your app locally.
+Supprimez la ligne suivante du fichier app/build.gradle.kts :
+signingConfig = signingConfigs.getByName("debugConfig")
 
-View your app in AI Studio: https://ai.studio/apps/238c43c7-1c79-4111-9c69-5703e28f159f
-
-## Run Locally
-
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
-
-
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
+Exécutez l'application sur un émulateur Android ou sur un appareil physique connecté.
